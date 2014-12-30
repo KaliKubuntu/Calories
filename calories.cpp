@@ -1,36 +1,44 @@
-# include <iostream>
-int main()
-{
-using std::cin;
-using std::cout;
-using namespace std;
-unsigned float weight;
-unsigned floyardWidthat length;
-unsigned float BMI;
-BMI==weight/length^2;
-cout<<"Enter your weight in kilograms: \n";
-cin>>weight;
-cout<<"Enter your length by meters: \n";
-cin>>length;
-if 18.5<=BMI<=20
-{
-    cout<<"LACK OF WEIGHT!!!\n";
-}
-if 25<BMI<=30
-{
-    cout<<"Normal Weight!\n";
-}
-if 30<BMI<=35
-{
-    cout<<"Overweight!\n";
-}
-if 35<BMI<=40
-{
-    cout<<"OBESE!!!\n";
-}
-if 40<BMI<18.5
-{
-    cout<<"WRONG VALUE! Enter Your Correct Weight & Length!\n";
-}
-return 0;
-}
+    # include <iostream>
+
+    int main()
+    {
+    using namespace std;
+    unsigned short int weight;
+    float length;
+    int BMI;
+
+    cout<<"Enter your weight in kilograms: \n";
+    cin>>weight;
+
+    cout<<"Enter your height by meter: \n";
+    cin>>length;
+
+    BMI=weight/ (length * length);
+
+    if (18.5<=BMI&&BMI<=20)
+    {
+        cout<<"LACK OF WEIGHT!!!\n";
+    }
+    else
+    if (25<BMI&&BMI<=30)
+    {
+        cout<<"Normal Weight!\n";
+    }
+    else
+    if (30<BMI&&BMI<=35)
+    {
+        cout<<"Overweight!\n";
+    }
+    else
+    if (35<BMI&&BMI<=40)
+    {
+        cout<<"OBESE!!!\n";
+    }
+    else
+    if (40<BMI||BMI<18.5)
+    {
+        cout<<"WRONG VALUE! Enter Your Correct Weight and Height!\n";
+    }
+    cout << endl << endl;
+    return 0;
+    }
