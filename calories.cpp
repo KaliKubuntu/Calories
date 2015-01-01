@@ -1,9 +1,12 @@
-    # include <iostream>
+# include <iostream>
+int menu();
+void DoTask();
 
-    int main()
-    {
     using namespace std;
-    unsigned short int weight;
+
+int main()
+    {
+    float weight;
     float length;
     int BMI;
 
@@ -40,5 +43,42 @@
         cout<<"WRONG VALUE! Enter Your Correct Weight and Height!\n";
     }
     cout << endl << endl;
+        bool exit = false;
+        for(;;)
+        {
+
+        int choice = menu();
+        switch(choice)
+        {
+        case (1):
+            DoTask();
+            break;
+        case(2):
+            exit=true;
+        default:
+            cout << "Please select again!" << endl;
+            break;
+        }
+
+        if (exit == true)
+            break;
+        }
     return 0;
+    }
+
+    int menu()
+    {
+        int choice;
+
+    cout << " *** Menu *** " << endl << endl;
+    cout << "(1) Check your BMI." << endl;
+    cout << "(2) Quit" << endl << endl;
+    cout << ": ";
+    cin >> choice;
+    return choice;
+    }
+
+    void DoTask()
+    {
+        cout << "Check your BMI!" << endl;
     }
