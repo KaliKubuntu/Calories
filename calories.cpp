@@ -22,6 +22,8 @@ for(;;){
     ideal_weight_down=18.5 * (length * length);
     ideal_weight_up=24.99 * (length * length);
 
+    cout << endl;
+
     if (BMI<16.00)
     {
         cout<<"SEVERE THINNESS!!!\n";
@@ -61,8 +63,9 @@ for(;;){
                                 {
                                     cout<<"Obese Class III!!!\n";
                                 }
-    cout << endl << endl;
+    cout << endl;
     cout<< "Your ideal weight is between " << ideal_weight_down <<" and "<< ideal_weight_up<<".\n\n";
+    cout << endl << endl;
 }
     return 0;
     }
