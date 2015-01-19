@@ -24,48 +24,54 @@ for(;;){
 
     cout << endl;
 
-    if (BMI<16.00)
+    if (BMI < 16.0)
     {
         cout<<"SEVERE THINNESS!!!\n";
     }
     else
-        if (16.00<=BMI&&BMI<=16.99)
+        if (BMI < 17.0)
         {
             cout<<"MODERATE THINNESS!!\n";
         }
         else
-            if (17.00<=BMI&&BMI<=18.49)
+            if (BMI < 18.5)
             {
                 cout<<"MILD THINNESS!\n";
             }
             else
-                if (18.50<=BMI&&BMI<=24.99)
+                if (BMI < 25.0)
                 {
                     cout<<"Normal Range\n";
                 }
                 else
-                    if (25<=BMI&&BMI<=29.99)
+                    if (BMI < 30.0)
                     {
                         cout<<"Pre-obese!\n";
                     }
                     else
-                        if (30<=BMI&&BMI<=34.99)
+                        if (BMI < 35.0)
                         {
                             cout<<"Obese Class I!\n";
                         }
                         else
-                            if (35<=BMI&&BMI<=39.99)
+                            if (BMI < 40.0)
                             {
                                 cout<<"Obese Class II!!\n";
                             }
                             else
-                                if (40<=BMI)
                                 {
                                     cout<<"Obese Class III!!!\n";
                                 }
     cout << endl;
     cout<< "Your ideal weight is between " << ideal_weight_down <<" and "<< ideal_weight_up<<".\n\n";
     cout << endl << endl;
+
+    std::string cont;
+    cout << "Do you want to continue (y/N): ";
+    cin >> cont;
+    cout << endl;
+
+    if (cont.empty() || cont[0] == 'n' || cont[0] == 'N') break;
 }
     return 0;
     }
